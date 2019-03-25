@@ -143,11 +143,12 @@ sudo apt-get install smplayer
 ```
 
 ## Skype
-Configuración del Sistema > Software y actualizaciones > Otro Software > Socio de Canonical
 ```bash
 sudo apt-get install skype
 ```
-
+::: warning Requiere habilitar paquetes de Socio Canonical
+Configuración del Sistema > Software y actualizaciones > Otro Software > Socio de Canonical
+:::
 ## 7zip
 ```bash
 sudo apt-get install p7zip p7zip-rar
@@ -174,8 +175,11 @@ sudo apt-get install git
 sudo apt-get install zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
-> Necesitas Git instalado
-> Necesitras curl
+::: tip
+- Necesitas Git
+- Necesitras cUrl
+:::
+
 
 ## Terminator
 ``` bash
@@ -199,23 +203,28 @@ sudo apt-get install rails
 # ó
 sudo gem install rails
 ```
-> Si marca un error de sqlite3 ejecutar:
-> ```bash
-> apt-get install libsqlite3-dev
-> ```
-
-> Si marca error con la gema Nokogiri :
-> ```bash
-> # See http://www.nokogiri.org/tutorials/installing_nokogiri.html#ubuntu___debian
-> sudo apt-get install build-essential patch
-> sudo apt-get install ruby-dev zlib1g-dev liblzma-dev
-> ```
+::: danger
+Si marca un error de sqlite3 ejecutar:
+```bash
+apt-get install libsqlite3-dev
+```
+:::
+::: danger
+Si marca error con la gema Nokogiri :
+```bash
+# See http://www.nokogiri.org/tutorials/installing_nokogiri.html#ubuntu___debian
+sudo apt-get install build-essential patch
+sudo apt-get install ruby-dev zlib1g-dev liblzma-dev
+```
+:::
 
 ## Python
 ```bash
 python --version
 ```
-> Python estan instalado por default.
+::: tip 
+Python estan instalado por default.
+:::
 
 ## [NodeJS](https://nodejs.org/es/download/package-manager/)
 ```bash
@@ -253,7 +262,9 @@ sudo apt-get install mysql-server
 sudo apt-get install mariadb-server
 mysql -u root -p
 ```
-> No tolera campos tipo JSON
+::: warning
+No tolera campos tipo JSON
+:::
 
 ## Apache2
 ```bash
@@ -276,8 +287,14 @@ sudo gedit /etc/php/{version}/apache2/php.ini
 sudo add-apt-repository ppa:ondrej/php
 sudo apt-get install php
 ```
-> Extensiones: **php-xml**, **php-mbstring**
-> La libreria **php7.0-snmp** causa una lista de "errores" al momento de ejecutar el comando **php**.
+::: tip Extensiones:
+```bash
+sudo apt-get install php-xml php-mbstring
+```
+:::
+::: danger
+La libreria **php7.0-snmp** causa una lista de "errores" al momento de ejecutar el comando **php**.
+:::
 
  ### `php.ini`
  ```bash
